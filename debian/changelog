@@ -1,5 +1,27 @@
-template-repository (1.0-1) unstable; urgency=medium
+haskell-commonmark-extensions (0.2.3.3-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Fri, 21 Oct 2022 21:10:15 +0300
+
+haskell-commonmark-extensions (0.2.3.2-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Declare compliance with Debian policy 4.6.1
+
+  [ Scott Talbert ]
+  * New upstream release
+
+ -- Scott Talbert <swt@techie.net>  Fri, 05 Aug 2022 11:52:51 -0400
+
+haskell-commonmark-extensions (0.2.0.4-2) unstable; urgency=medium
+
+  * Post-NEW source-only upload
+
+ -- Robert Greener <rob@robgreener.com>  Mon, 30 May 2022 14:00:55 +0100
+
+haskell-commonmark-extensions (0.2.0.4-1) unstable; urgency=low
+
+  * Initial release (Closes: #1010752)
+
+ -- Robert Greener <rob@robgreener.com>  Sun, 08 May 2022 18:47:53 +0000

@@ -1,15 +1,76 @@
-Source: template-repository
-Section: unknown
+Source: haskell-commonmark-extensions
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Robert Greener <rob@robgreener.com>
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ haskell-devscripts-minimal | haskell-devscripts (>= 0.13),
+ cdbs,
+ ghc,
+ ghc-prof,
+ libghc-commonmark-dev (>= 0.2.2),
+ libghc-commonmark-dev (<< 0.3),
+ libghc-commonmark-prof,
+ libghc-emojis-dev (>= 0.1),
+ libghc-emojis-dev (<< 0.2),
+ libghc-emojis-prof,
+ libghc-network-uri-dev,
+ libghc-network-uri-prof,
+ libghc-commonmark-dev (>= 0.2),
+ libghc-tasty-dev,
+ libghc-tasty-prof,
+ libghc-tasty-hunit-dev,
+ libghc-tasty-hunit-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-commonmark-doc,
+ libghc-emojis-doc,
+ libghc-network-uri-doc,
+Standards-Version: 4.6.1
+Homepage: https://github.com/jgm/commonmark-hs
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-commonmark-extensions
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-commonmark-extensions]
+X-Description: Pure Haskell commonmark parser extensions
+ This library provides some useful extensions to core commonmark
+ syntax: smart quotes, definition lists, tables, footnotes, math,
+ and more.
 
-Package: template-repository
+Package: libghc-commonmark-extensions-dev
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-commonmark-extensions-prof
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Provides: ${haskell:Provides},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
+
+Package: libghc-commonmark-extensions-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Conflicts: ${haskell:Conflicts},
+Description: ${haskell:ShortDescription}${haskell:ShortBlurb}
+ ${haskell:LongDescription}
+ .
+ ${haskell:Blurb}
